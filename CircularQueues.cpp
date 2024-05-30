@@ -19,16 +19,16 @@ public:
         cout << "Enter a number: ";
         cin >> num;
         cout << endl;
-		//cek apakah antrian penuh
-		if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
-			cout << "\nQueue overflow\n";
-			return;
-		}
-		// cek apakah antrian kosong
-		if (FRONT == -1) {
-			FRONT = 0;
-			REAR = 0;
-		}
+        //cek apakah antrian penuh
+        if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
+            cout << "\nQueue overflow\n";
+            return;
+        }
+        // cek apakah antrian kosong
+        if (FRONT == -1) {
+            FRONT = 0;
+            REAR = 0;
+        }
         else {
             //jika REAR berapa di posisi terakhir array, kembali ke awla array
             if (REAR == max - 1)
@@ -90,9 +90,14 @@ public:
 
         FRONT_Position = 0;
 
-
-
+        //Iterasi dari awal array hingga REAR
+        while (FRONT_Position <= REAR_Position) {
+            cout << queue_array[FRONT_Position] << " ";
+            FRONT_Position++;
+        }
     }
+};
+
 
 
 	
